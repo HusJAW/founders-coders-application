@@ -1,0 +1,63 @@
+@use "../helper/_mixins" as *;
+@use "../base/_variables" as *;
+
+.home {
+  @include flexCenterClumn();
+  gap: 2rem;
+  .hero-info {
+    // width: 34rem;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    line-height: 3rem;
+    @include flexCenterClumn();
+    gap: 0.6rem;
+  }
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    div {
+      img {
+        height: 400px;
+        transform: rotate(-20deg);
+        // position: absolute;
+        right: -5.5rem;
+        top: 5rem;
+      }
+    }
+    .hero-info {
+      //   width: 40rem;
+      //   margin-left: -5rem;
+      @include breakpoint(desktop) {
+        p:nth-of-type(1) {
+          margin-left: -28rem;
+        }
+        p:nth-of-type(2) {
+          margin-left: -25rem;
+        }
+        p:nth-of-type(3) {
+          margin-left: -10rem;
+        }
+        p:nth-of-type(4) {
+          margin-left: -5rem;
+        }
+        p:nth-of-type(5) {
+          margin-left: -5rem;
+        }
+      }
+    }
+  }
+
+  .Button {
+    padding: 1.5rem 2rem;
+    border-radius: 1.4rem;
+    text-decoration: none;
+    color: white;
+
+    &.why {
+      background: red;
+    }
+
+    &.view {
+      background: var(--peach);
+    }
+  }
+}

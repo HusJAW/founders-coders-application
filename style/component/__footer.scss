@@ -1,0 +1,26 @@
+@use "../helper/_mixins" as *;
+@use "../base/_variables" as *;
+
+footer {
+  overflow: hidden;
+  max-width: 111rem;
+
+  .wave {
+    width: 100.2%;
+  }
+  .footer-info-container {
+    margin-top: -0.2rem;
+    padding: 0rem 5rem;
+    padding-bottom: 5rem;
+
+    background: #00252e;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    img {
+      height: 2.5rem;
+    }
+  }
+}

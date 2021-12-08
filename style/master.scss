@@ -1,0 +1,18 @@
+//----------BASE----------
+@use "base/_page-reset";
+@use "base/_typography";
+@use "base/_variables";
+@use "base/_global";
+
+//----------COMPONENTS----------]
+@use "component/_header";
+@use "component/_home";
+@use "component/_footer";
+@use "component/_why-apply";
+@use "component/_project-cards";
+
+//----------HELPER----------
+@use "helper/_helperClasses";
+@use "helper/_mixins";
+
+//----------PAGES----------

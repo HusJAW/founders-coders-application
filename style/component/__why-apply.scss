@@ -1,0 +1,33 @@
+@use "../helper/_mixins" as *;
+@use "../base/_variables" as *;
+
+.why-apply {
+  position: relative;
+  .man-in-hat {
+    display: none;
+  }
+  .info-container {
+    @include flexCenterClumn();
+  }
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 10rem;
+  }
+  p {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.21rem;
+    line-height: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  @include breakpoint(tablet) {
+    position: relative;
+    .man-in-hat {
+      display: block;
+      height: 14rem;
+      position: absolute;
+      right: 0rem;
+    }
+  }
+}

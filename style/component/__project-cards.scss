@@ -1,0 +1,48 @@
+@use "../helper/_mixins" as *;
+@use "../base/_variables" as *;
+.projects {
+  display: grid;
+  place-items: center;
+}
+
+.project-hero-section {
+  max-width: 76.8rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background: rgb(239, 247, 250);
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+}
+
+.project-card {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  .project-card-info {
+    width: 32rem;
+    text-align: center;
+    h2 {
+      font-size: 2.1rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+
+    a:nth-of-type(1) {
+      line-height: 3rem;
+    }
+  }
+}
