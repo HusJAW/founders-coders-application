@@ -4,6 +4,7 @@
 .home {
   @include flexCenterClumn();
   gap: 2rem;
+  margin-bottom: 1rem;
   .hero-info {
     // width: 34rem;
     font-size: 2rem;

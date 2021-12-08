@@ -199,7 +199,7 @@ main {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #080052;
 }
 
 .nav-bar-header {
@@ -221,11 +221,13 @@ main {
 }
 .nav-bar-header .logo-container {
   height: 6rem;
+  z-index: 5;
 }
 .nav-bar-header .logo-container img {
   width: 100%;
 }
 .nav-bar-header .hamburger-lines-container {
+  z-index: 5;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -316,7 +318,7 @@ main {
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 9.5rem;
+  top: 0rem;
   left: 0;
   z-index: 1;
   background: var(--dark-grey);
@@ -337,6 +339,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  margin-bottom: 1rem;
 }
 .home .hero-info {
   font-size: 2rem;
@@ -491,6 +494,12 @@ footer .footer-info-container img {
   line-height: 3rem;
 }
 
+.quick-link {
+  height: 3rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
 .hide {
   display: none;
 }
@@ -501,6 +510,10 @@ footer .footer-info-container img {
 
 .hidden-visiblity {
   visibility: hidden;
+}
+
+section {
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=master.css.map */

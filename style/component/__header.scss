@@ -21,11 +21,13 @@
   .logo-container {
     // width: 20.2rem;
     height: 6rem;
+    z-index: 5;
     img {
       width: 100%;
     }
   }
   .hamburger-lines-container {
+    z-index: 5;
     position: absolute;
     @include flexCenterClumn();
     right: 2.4rem;
@@ -123,7 +125,7 @@
     // position: absolute;
     width: 100%;
     height: 100%;
-    top: 9.5rem;
+    top: 0rem;
     // width: calc(100vh - 18.2rem); // needs fixing also checck HTML
     // height: calc(100vh - 6.3rem);
     left: 0;
