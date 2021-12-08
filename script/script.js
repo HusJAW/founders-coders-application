@@ -51,3 +51,5 @@ function goBacktoI() {
 next.addEventListener("click", goToNextImg);
 
 back.addEventListener("click", goBacktoI);
+
+// nav buttons
