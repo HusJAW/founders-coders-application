@@ -6,7 +6,7 @@ body {
   font-family: "Nova Square", cursive;
 
   // background: var(--grey-blue-900);
-  background: #00252e;
+  // background: #00252e;
   min-width: 37.5rem;
   display: grid;
   grid-template-columns: minmax(2.4rem, 1fr) minmax(32.7rem, 111.1rem) minmax(
@@ -31,4 +31,28 @@ main {
   grid-column: 2/3;
   // background-color: var(--grey-blue-300);
   background: white;
+}
+
+//testing scrollbar styling
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #8ce8ff;
+  border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00252e;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
