@@ -4,21 +4,32 @@
 .why-apply {
   position: relative;
   .man-in-hat {
-    display: none;
+    // display: none;
+    height: 8rem;
+    position: absolute;
+    right: 3rem;
+    bottom: -4rem;
   }
   .info-container {
     @include flexCenterClumn();
   }
   h1 {
-    font-size: 5rem;
+    font-size: 2.5rem;
     margin-bottom: 10rem;
+    @include breakpoint(tablet) {
+      font-size: 5rem;
+    }
   }
   p {
     font-family: "Atkinson Hyperlegible", sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+
     letter-spacing: 0.21rem;
     line-height: 3rem;
     margin-bottom: 5rem;
+    @include breakpoint(tablet) {
+      font-size: 2.5rem;
+    }
   }
 
   @include breakpoint(tablet) {
@@ -28,6 +39,7 @@
       height: 14rem;
       position: absolute;
       right: 0rem;
+      top: 0;
     }
   }
 }
