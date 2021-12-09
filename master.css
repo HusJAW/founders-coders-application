@@ -512,6 +512,10 @@ footer .footer-info-container img {
   margin-bottom: 1rem;
   font-weight: bold;
 }
+.project-card .project-card-info p {
+  margin-bottom: 0.9rem;
+  text-align: left;
+}
 .project-card .project-card-info a:nth-of-type(1) {
   line-height: 3rem;
 }
