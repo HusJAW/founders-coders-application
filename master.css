@@ -149,8 +149,6 @@ table {
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
   --peach: #e7816b;
-  --black: #1d1c1e;
-  --white: #ffffff;
   --light-peach: #ffad9b;
   --light-peach-19: rgba(255, 172, 153, 0.19);
   --dark-grey: #333136;
@@ -159,6 +157,7 @@ table {
 
 body {
   font-family: "Nova Square", cursive;
+  background: #00252e;
   min-width: 37.5rem;
   display: grid;
   grid-template-columns: minmax(2.4rem, 1fr) minmax(32.7rem, 111.1rem) minmax(2.4rem, 1fr);
@@ -178,6 +177,7 @@ main {
   max-width: 144rem;
   grid-column: 2/3;
   background: white;
+  border-radius: 1.4rem;
 }
 
 /* width */
@@ -193,7 +193,7 @@ main {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #00252e;
+  background: #054252;
   border-radius: 15px;
 }
 
@@ -212,6 +212,7 @@ main {
   align-items: center;
   position: relative;
   grid-column: 2/3;
+  border-radius: 1.4rem;
 }
 @media screen and (min-width: 768px) {
   .nav-bar-header {
@@ -225,39 +226,6 @@ main {
 }
 .nav-bar-header .logo-container img {
   width: 100%;
-}
-.nav-bar-header .hamburger-lines-container {
-  z-index: 5;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  right: 2.4rem;
-  cursor: pointer;
-}
-.nav-bar-header .hamburger-lines-container .hamburger-line {
-  width: 2.4rem;
-  height: 0.4rem;
-  margin: 2px;
-  background: var(--black);
-  transform-origin: center;
-  transition: 250ms ease-in-out;
-}
-@media screen and (min-width: 768px) {
-  .nav-bar-header .hamburger-lines-container {
-    display: none;
-  }
-}
-.nav-bar-header .hamburger-lines-container .hamburger-line-rotate-left.active {
-  transform: rotate(45deg) translate(0.6rem, 0.6rem);
-}
-.nav-bar-header .hamburger-lines-container .hamburger-line-center.active {
-  opacity: 0;
-  transform: scale(0, 0);
-}
-.nav-bar-header .hamburger-lines-container .hamburger-line-rotate-right.active {
-  transform: rotate(-45deg) translate(0.5rem, -0.6rem);
 }
 .nav-bar-header .page-navigation {
   position: absolute;
@@ -330,8 +298,54 @@ main {
     display: none;
   }
 }
-.nav-bar-header .show {
+
+.hamburger-lines-container {
+  z-index: 5;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 2.4rem;
+  cursor: pointer;
+}
+.hamburger-lines-container .hamburger-line {
+  width: 2.4rem;
+  height: 0.4rem;
+  margin: 2px;
+  background: var(--black);
+  transform-origin: center;
+  transition: 250ms ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .hamburger-lines-container {
+    display: none;
+  }
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked ~ .page-navigation {
   transform: scale(1, 1);
+}
+
+.checkbox:checked ~ .overlay {
+  transform: scale(1, 1);
+}
+
+.checkbox:checked ~ .hamburger-lines-container > .hamburger-line-rotate-left {
+  transform: rotate(45deg) translate(0.6rem, 0.6rem);
+}
+
+.checkbox:checked ~ .hamburger-lines-container > .hamburger-line-center {
+  opacity: 0;
+  transform: scale(0, 0);
+}
+
+.checkbox:checked ~ .hamburger-lines-container > .hamburger-line-rotate-right {
+  transform: rotate(-45deg) translate(0.5rem, -0.6rem);
 }
 
 .home {
@@ -399,6 +413,7 @@ main {
 footer {
   overflow: hidden;
   max-width: 111rem;
+  grid-column: 2/3;
 }
 footer .wave {
   width: 100%;
@@ -420,6 +435,7 @@ footer .footer-info-container img {
 
 .why-apply {
   position: relative;
+  padding: 2rem;
 }
 .why-apply .man-in-hat {
   height: 8rem;
@@ -470,6 +486,7 @@ footer .footer-info-container img {
 .projects {
   display: grid;
   place-items: center;
+  margin-top: 2rem;
 }
 
 .project-hero-section {
@@ -481,6 +498,7 @@ footer .footer-info-container img {
 @media screen and (min-width: 768px) {
   .project-hero-section {
     background: #eff7fa;
+    border-radius: 1.4rem;
   }
 }
 .project-hero-section h1 {
@@ -515,6 +533,7 @@ footer .footer-info-container img {
 .project-card .project-card-info p {
   margin-bottom: 0.9rem;
   text-align: left;
+  font-family: "Atkinson Hyperlegible", sans-serif;
 }
 .project-card .project-card-info a:nth-of-type(1) {
   line-height: 3rem;

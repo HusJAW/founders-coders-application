@@ -1,27 +1,3 @@
-function hamburgerMenu() {
-  const overlay = document.querySelector(".overlay");
-  const navMenu = document.querySelector(".page-navigation");
-  const burgerMenu = document.querySelector(".hamburger-lines-container");
-
-  const navClassArray = [overlay, navMenu];
-  const hamburgerLinesArrat = [...document.querySelectorAll(".hamburger-line")];
-
-  burgerMenu.addEventListener("click", (e) => {
-    // hamburgerLinesArrat[0].classList.toggle('hamburger-line-rotate-left')
-    // hamburgerLinesArrat[1].classList.toggle('hamburger-line-center')
-    // hamburgerLinesArrat[2].classList.toggle('hamburger-line-rotate-right')
-    hamburgerLinesArrat.forEach((item) => {
-      item.classList.toggle("active");
-    });
-
-    navClassArray.forEach((classes) => {
-      classes.classList.toggle("show");
-    });
-  });
-}
-
-hamburgerMenu();
-
 let back = document.querySelector(".back");
 let next = document.querySelector(".next");
 
@@ -65,6 +41,8 @@ const homeSection = document.querySelector(".home");
 const whyApplySection = document.querySelector(".why-apply");
 const projectSection = document.querySelector(".projects");
 
+const checkbox = document.querySelector(".checkbox");
+
 function ShowHomeSection() {
   homeSection.classList.remove("hide");
 
@@ -74,6 +52,10 @@ function ShowHomeSection() {
 
   if (!projectSection.classList.contains("hide")) {
     projectSection.classList.add("hide");
+  }
+
+  if (checkbox.checked === true) {
+    checkbox.checked = false;
   }
 }
 
@@ -87,6 +69,10 @@ function showWhyApplySection() {
   if (!projectSection.classList.contains("hide")) {
     projectSection.classList.add("hide");
   }
+
+  if (checkbox.checked === true) {
+    checkbox.checked = false;
+  }
 }
 
 function showProjectSection() {
@@ -98,6 +84,10 @@ function showProjectSection() {
 
   if (!whyApplySection.classList.contains("hide")) {
     whyApplySection.classList.add("hide");
+  }
+
+  if (checkbox.checked === true) {
+    checkbox.checked = false;
   }
 }
 

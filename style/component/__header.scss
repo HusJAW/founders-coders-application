@@ -12,6 +12,7 @@
   align-items: center;
   position: relative;
   grid-column: 2/3;
+  border-radius: 1.4rem;
   @include breakpoint(tablet) {
     // margin: 6.4rem auto;
     position: static;
@@ -24,37 +25,6 @@
     z-index: 5;
     img {
       width: 100%;
-    }
-  }
-  .hamburger-lines-container {
-    z-index: 5;
-    position: absolute;
-    @include flexCenterClumn();
-    right: 2.4rem;
-    cursor: pointer;
-    .hamburger-line {
-      width: 2.4rem;
-      height: 0.4rem;
-      margin: 2px;
-      background: var(--black);
-      transform-origin: center;
-      transition: 250ms ease-in-out;
-    }
-    @include breakpoint(tablet) {
-      display: none;
-    }
-    .hamburger-line-rotate-left.active {
-      // 1
-      transform: rotate(45deg) translate(0.6rem, 0.6rem);
-    }
-    .hamburger-line-center.active {
-      //2
-      opacity: 0;
-      transform: scale(0, 0);
-    }
-    .hamburger-line-rotate-right.active {
-      //3
-      transform: rotate(-45deg) translate(0.5rem, -0.6rem);
     }
   }
 
@@ -138,7 +108,53 @@
     }
   }
 
-  .show {
-    transform: scale(1, 1);
+  // .show {
+  //   transform: scale(1, 1);
+  // }
+}
+
+.hamburger-lines-container {
+  z-index: 5;
+  position: absolute;
+  @include flexCenterClumn();
+  right: 2.4rem;
+  cursor: pointer;
+  .hamburger-line {
+    width: 2.4rem;
+    height: 0.4rem;
+    margin: 2px;
+    background: var(--black);
+    transform-origin: center;
+    transition: 250ms ease-in-out;
   }
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked ~ .page-navigation {
+  transform: scale(1, 1);
+}
+
+.checkbox:checked ~ .overlay {
+  transform: scale(1, 1);
+}
+
+.checkbox:checked ~ .hamburger-lines-container > .hamburger-line-rotate-left {
+  // 1
+  transform: rotate(45deg) translate(0.6rem, 0.6rem);
+}
+
+.checkbox:checked ~ .hamburger-lines-container > .hamburger-line-center {
+  //2
+  opacity: 0;
+  transform: scale(0, 0);
+}
+.checkbox:checked ~ .hamburger-lines-container > .hamburger-line-rotate-right {
+  //3
+  transform: rotate(-45deg) translate(0.5rem, -0.6rem);
 }
